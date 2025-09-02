@@ -1,0 +1,171 @@
+/* ====== Reset ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ====== Body ====== */
+body {
+  background: #121212;
+  color: #eee;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+/* ====== Container ====== */
+.container {
+  max-width: 900px;
+  width: 100%;
+  background: #1e1e1e;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+}
+
+/* ====== Headings ====== */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+/* ====== Buttons ====== */
+button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+  margin: 0.3rem 0;
+  background: linear-gradient(135deg, #6200ee, #3700b3);
+  transition: all 0.3s ease;
+  width: 100%;
+}
+button:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 15px rgba(98,0,238,0.5);
+}
+
+/* ====== Inputs ====== */
+input {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  margin: 0.3rem 0;
+  width: 100%;
+  background: #2a2a2a;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+input:focus {
+  outline: none;
+  background: #3a3a3a;
+  box-shadow: 0 0 8px #6200ee;
+}
+
+/* ====== Clinic List Container ====== */
+#clinics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+/* ====== Clinic Item / Card ====== */
+#clinics .clinic-item {
+  background: #2a2a2a;
+  padding: 0.8rem 1rem; /* حجم أصغر */
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex: 0 0 48%; /* كرتين في الصف */
+  cursor: pointer;
+}
+#clinics .clinic-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+/* ====== Admin Cards ====== */
+.admin-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.admin-card input {
+  width: 45%;
+  margin: 0.3rem 0;
+}
+.admin-card button {
+  width: auto;
+  margin-left: 0.3rem;
+}
+
+/* ====== Buttons container ====== */
+.buttons {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* ====== Booking Fields ====== */
+#bookingFields input,#bookingFields button {
+  margin-bottom: 0.5rem;
+}
+
+/* ====== Status Result Cards ====== */
+#statusResult .clinic-item {
+  background: #2a2a2a;
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+}
+
+/* ====== Patient Page Inputs & Buttons ====== */
+#clinics input, #clinics button,
+#statusPhone, #checkStatusBtn {
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+/* ====== Responsive ====== */
+@media screen and (max-width: 900px){
+  #clinics .clinic-item {
+    flex: 0 0 100%; /* كرت واحد في الصف على الشاشات المتوسطة */
+  }
+  .admin-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .admin-card input { width: 100%; }
+  .admin-card button { width: 48%; margin-top: 0.3rem; }
+}
+
+@media screen and (max-width: 600px){
+  .container { padding: 1rem; }
+  input, button { width: 100%; }
+  .admin-card input { width: 100%; margin-bottom: 0.5rem; }
+  .admin-card button { width: 48%; margin-top: 0.3rem; }
+}
+/* زر عرض العيادات */
+#showClinicsBtn {
+  background: linear-gradient(135deg, #03dac6, #018786);
+  color: #121212;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+#showClinicsBtn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(3,218,198,0.5);
+}

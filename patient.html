@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حجز المواعيد</title>
+<link rel="stylesheet" href="style.css">
+<script src="main.js" defer></script>
+</head>
+<body>
+<div class="container">
+  <h1>احجز موعدك</h1>
+
+  <!-- زر عرض العيادات -->
+  <div class="buttons">
+    <button id="showClinicsBtn">عرض العيادات المتوفرة</button>
+  </div>
+
+  <!-- Clinics (hidden by default) -->
+  <div id="clinics" style="display:none;"></div>
+
+  <!-- Booking Fields (hidden by default) -->
+  <div id="bookingFields" style="display:none;">
+    <input type="text" id="name" placeholder="الاسم">
+    <input type="text" id="phone" placeholder="رقم الهاتف">
+    <input type="date" id="date">
+    <button id="bookBtn">احجز الآن</button>
+  </div>
+
+  <!-- التحقق من الحالة -->
+  <h2>تحقق من حالة حجزك</h2>
+  <input type="text" id="statusPhone" placeholder="أدخل رقم هاتفك">
+  <button id="checkStatusBtn">تحقق</button>
+  <div id="statusResult"></div>
+</div>
+</body>
+</html>
