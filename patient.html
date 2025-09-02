@@ -11,21 +11,15 @@
 <div class="container">
   <h1>احجز موعدك</h1>
 
-  <!-- زر عرض العيادات -->
-  <div class="buttons">
-    <button id="showClinicsBtn">عرض العيادات المتوفرة</button>
-  </div>
+  <label for="clinicSelect">اختر العيادة:</label>
+  <select id="clinicSelect">
+    <option value="">-- اختر العيادة --</option>
+  </select>
 
-  <!-- Clinics (hidden by default) -->
-  <div id="clinics" style="display:none;"></div>
-
-  <!-- Booking Fields (hidden by default) -->
-  <div id="bookingFields" style="display:none;">
-    <input type="text" id="name" placeholder="الاسم">
-    <input type="text" id="phone" placeholder="رقم الهاتف">
-    <input type="date" id="date">
-    <button id="bookBtn">احجز الآن</button>
-  </div>
+  <input type="text" id="name" placeholder="الاسم">
+  <input type="text" id="phone" placeholder="رقم الهاتف">
+  <input type="date" id="date">
+  <button id="bookBtn">احجز الآن</button>
 
   <!-- التحقق من الحالة -->
   <h2>تحقق من حالة حجزك</h2>
@@ -35,4 +29,3 @@
 </div>
 </body>
 </html>
-

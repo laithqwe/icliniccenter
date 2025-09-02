@@ -27,12 +27,12 @@ function showAdminLogin(){
 }
 
 // بيانات المدير مخزنة بالكود
-const ADMIN_CREDENTIALS = { username:"admin", password:"1234" };
+const ADMIN_CREDENTIALS = { username:"admin", password:"amro123" };
 
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("adminLoginBtn");
   if(btn){
-    btn.addEventListener("click", ()=>{
+    btn.addEventListener("click", ()=> {
       const username = document.getElementById("username").value.trim();
       const password = document.getElementById("password").value.trim();
       if(username===ADMIN_CREDENTIALS.username && password===ADMIN_CREDENTIALS.password){

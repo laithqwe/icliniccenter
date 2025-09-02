@@ -8,8 +8,16 @@
 </head>
 <body>
   <div class="container">
-
     <h2>المواعيد</h2>
+
+    <!-- فلترة حسب الفترة -->
+    <div class="filter-dates">
+      <label>من: <input type="date" id="fromDate"></label>
+      <label>إلى: <input type="date" id="toDate"></label>
+      <button id="filterBtn">عرض المواعيد</button>
+      <button id="printBtn" style="display:none;">طباعة المواعيد</button>
+    </div>
+
     <div id="appointmentsContainer"></div>
   </div>
   <script src="admin.js"></script>

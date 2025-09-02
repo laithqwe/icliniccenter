@@ -54,7 +54,7 @@ button:hover {
 }
 
 /* ====== Inputs ====== */
-input {
+input, select {
   padding: 0.6rem 1rem;
   border-radius: 8px;
   border: none;
@@ -64,34 +64,10 @@ input {
   color: #fff;
   transition: all 0.3s ease;
 }
-input:focus {
+input:focus, select:focus {
   outline: none;
   background: #3a3a3a;
   box-shadow: 0 0 8px #6200ee;
-}
-
-/* ====== Clinic List Container ====== */
-#clinics {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-}
-
-/* ====== Clinic Item / Card ====== */
-#clinics .clinic-item {
-  background: #2a2a2a;
-  padding: 0.8rem 1rem; /* حجم أصغر */
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.6);
-  transition: transform 0.3s, box-shadow 0.3s;
-  flex: 0 0 48%; /* كرتين في الصف */
-  cursor: pointer;
-}
-#clinics .clinic-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
 }
 
 /* ====== Admin Cards ====== */
@@ -116,13 +92,8 @@ input:focus {
   margin: 2rem 0;
 }
 
-/* ====== Booking Fields ====== */
-#bookingFields input,#bookingFields button {
-  margin-bottom: 0.5rem;
-}
-
 /* ====== Status Result Cards ====== */
-#statusResult .clinic-item {
+#statusResult .card {
   background: #2a2a2a;
   padding: 0.8rem 1rem;
   margin: 0.5rem 0;
@@ -130,18 +101,8 @@ input:focus {
   box-shadow: 0 6px 15px rgba(0,0,0,0.6);
 }
 
-/* ====== Patient Page Inputs & Buttons ====== */
-#clinics input, #clinics button,
-#statusPhone, #checkStatusBtn {
-  width: 100%;
-  margin: 0.5rem 0;
-}
-
 /* ====== Responsive ====== */
 @media screen and (max-width: 900px){
-  #clinics .clinic-item {
-    flex: 0 0 100%; /* كرت واحد في الصف على الشاشات المتوسطة */
-  }
   .admin-card {
     flex-direction: column;
     align-items: flex-start;
@@ -152,20 +113,7 @@ input:focus {
 
 @media screen and (max-width: 600px){
   .container { padding: 1rem; }
-  input, button { width: 100%; }
+  input, button, select { width: 100%; }
   .admin-card input { width: 100%; margin-bottom: 0.5rem; }
   .admin-card button { width: 48%; margin-top: 0.3rem; }
-}
-/* زر عرض العيادات */
-#showClinicsBtn {
-  background: linear-gradient(135deg, #03dac6, #018786);
-  color: #121212;
-  font-weight: bold;
-  padding: 0.8rem 1.5rem;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-}
-#showClinicsBtn:hover {
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 6px 20px rgba(3,218,198,0.5);
 }
