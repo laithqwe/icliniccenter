@@ -3,60 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>نظام المواعيد</title>
+<title>حجز المواعيد</title>
 <link rel="stylesheet" href="style.css">
-  
-<!-- Google AdSense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7528302587637897"
-     crossorigin="anonymous"></script>
-
+<script src="main.js" defer></script>
 </head>
 <body>
-  <div class="container">
-    <h1>نظام المواعيد</h1>
-    <div class="buttons">
-      <button onclick="location.href='patient.html'">دخول كمراجع</button>
-      <button onclick="showAdminLogin()">دخول كموظف</button>
-    </div>
+<div class="container">
+  <h1>احجز موعدك</h1>
 
-    <div id="adminLogin" style="display:none; margin-top:20px;">
-      <input type="text" id="username" placeholder="اسم المستخدم">
-      <input type="password" id="password" placeholder="كلمة المرور">
-      <button id="adminLoginBtn">دخول</button>
-    </div>
-  </div>
-<div style="text-align:center; margin:20px 0;">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-7528302587637897"
-         data-ad-slot="1607361919"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
-<script>
-function showAdminLogin(){
-  document.getElementById("adminLogin").style.display = "block";
-}
+  <label for="clinicSelect">اختر العيادة:</label>
+  <select id="clinicSelect">
+    <option value="">-- اختر العيادة --</option>
+  </select>
 
-// بيانات المدير مخزنة بالكود
-const ADMIN_CREDENTIALS = { username:"admin", password:"amro123" };
+  <input type="text" id="name" placeholder="الاسم">
+  <input type="text" id="phone" placeholder="رقم الهاتف">
+  <input type="date" id="date">
+  <button id="bookBtn">احجز الآن</button>
 
-document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("adminLoginBtn");
-  if(btn){
-    btn.addEventListener("click", ()=> {
-      const username = document.getElementById("username").value.trim();
-      const password = document.getElementById("password").value.trim();
-      if(username===ADMIN_CREDENTIALS.username && password===ADMIN_CREDENTIALS.password){
-        window.location.href = "admin.html";
-      } else {
-        alert("بيانات المدير غير صحيحة");
-      }
-    });
-  }
-});
-</script>
+  <!-- التحقق من الحالة -->
+  <h2>تحقق من حالة حجزك</h2>
+  <input type="text" id="statusPhone" placeholder="أدخل رقم هاتفك بدون الصفر">
+  <button id="checkStatusBtn">تحقق</button>
+  <div id="statusResult"></div>
+</div>
 </body>
 </html>
-
